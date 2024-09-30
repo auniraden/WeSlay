@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var messageString = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(messageString)
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(Color.black)
+                .padding()
+            HStack{
+                Button("Who are you?") {
+                    //This is the action performed when the button is pressed
+                    messageString = "A bird."
+                }
+                .buttonStyle(.borderedProminent)
+                Button("Do I look like a bird?") {
+                    messageString = "Maybe."
+                }
+                .buttonStyle(.borderedProminent)
+            }
         }
-        .padding()
+        
     }
 }
 

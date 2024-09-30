@@ -11,7 +11,7 @@ import SwiftUI
 struct WeSlayApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView() //this is where xcode create file to view content
         }
     }
 }
